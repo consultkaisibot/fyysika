@@ -16,3 +16,5 @@ ffmpeg -i vana.mp4 -i uus.mp4 -filter_complex "[0:v]trim=0:LÕIGE,setpts=PTS-STA
 2. `node engine.js opetajale.js ../../magnetvali/video/opetajale.mp4` (Playwrighti tee on mootoris `/opt/npm-tools/node_modules/playwright`).
 3. Stseeni pikkus = max(toimingud, kõne + 0,9 s); logi `<väljund>.log.json` näitab stseenide algusi ja kõne lõppe.
 4. Eelvaatepilt: `ffmpeg -ss 3 -i opetajale.mp4 -frames:v 1 -vf scale=960:540 opetajale.jpg`.
+
+**Vana aadress videotest eemaldatud** (24.11.2026): kõigi 18 video tiitri- ja lõpukaartidelt kustutati rida `vanakrt.github.io/…` (ka üleminekukaadritest; URL-i tähed täideti ümbritsevaga, heli kopeeriti muutmata, video crf 24). `opetajale.jpg` eelvaated tehti uuesti. Stsenaariumides on nüüd `kaisi.ee/fyysika`, nii et uutes videotes on õige aadress.
