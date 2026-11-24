@@ -923,7 +923,7 @@ function resize(){
   draw();
 }
 new ResizeObserver(resize).observe(main);
-if (/github\.io$/.test(location.hostname)) $('back').style.display = 'block';
+if (/(github\.io|kaisi\.ee)$/.test(location.hostname)) $('back').style.display = 'block';
 renderRayList(); renderPtList(); syncInputs(); resize();
 /* ---------- joonis töölehele (PNG eksport) ---------- */
 const EXP_K = 2.75;                    // seadme pikslit CSS-piksli kohta: 13 px kiri ≈ 3 mm, 1,8 px kiir ≈ 0,4 mm
@@ -1080,7 +1080,7 @@ $('xdown').onclick = async () => {
   try {
     const blob = await withDpi(await toBlob(xLast.canvas), DPI);
     if (IN_ARTIFACT){
-      if (!artDl){ xMsg('Allalaadimine pole selles vaates saadaval – kasuta „Kopeeri“ või ava leht vanakrt.github.io/optika.', 'err'); return; }
+      if (!artDl){ xMsg('Allalaadimine pole selles vaates saadaval – kasuta „Kopeeri“ või ava leht kaisi.ee/fyysika/optika.', 'err'); return; }
       try { await artDl.save({filename: name, data: blob}); xMsg('Fail ' + name + ' salvestati.', 'ok'); }
       catch (e){ xMsg(e && e.code === 'declined' ? 'Salvestamisest loobuti.' : 'Salvestamine ei õnnestunud (' + ((e && (e.code || e.message)) || e) + ').', e && e.code === 'declined' ? '' : 'err'); }
       return;
@@ -1113,7 +1113,7 @@ window.__op = {st, optics, imgPt, base, keyPoints, helperRay, rayDefs, outDir, d
 <script>
 /* Videojuhendid: failid on kaustas video/; nupud on näha ainult github.io-s (artefaktis videofaile pole) */
 (() => {
-  if (!/github\.io$/.test(location.hostname) && !/[?&]video\b/.test(location.search)) return;
+  if (!/(github\.io|kaisi\.ee)$/.test(location.hostname) && !/[?&]video\b/.test(location.search)) return;
   const row = document.getElementById('vids'), m = document.getElementById('vmodal'), v = m.querySelector('video');
   const names = {opetajale: 'Video õpetajale: kuidas simulatsiooni kasutada', opilasele: 'Video õpilasele: füüsika selgitus'};
   row.style.display = 'block';
@@ -1132,7 +1132,7 @@ window.__op = {st, optics, imgPt, base, keyPoints, helperRay, rayDefs, outDir, d
 </script>
 <script>
 /* Külastuste statistika: GoatCounter (küpsisteta, isikuandmeid ei salvestata), ainult github.io-s; tulemused: vanakrt.goatcounter.com */
-if (/github\.io$/.test(location.hostname)) {
+if (/(github\.io|kaisi\.ee)$/.test(location.hostname)) {
   const gc = document.createElement('script');
   gc.async = true; gc.dataset.goatcounter = 'https://vanakrt.goatcounter.com/count'; gc.src = 'https://gc.zgo.at/count.js';
   document.head.appendChild(gc);

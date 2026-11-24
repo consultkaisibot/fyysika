@@ -395,7 +395,7 @@ function resize(){
   draw();
 }
 new ResizeObserver(resize).observe(main);
-if (/github\.io$/.test(location.hostname)) $('back').style.display = 'block';
+if (/(github\.io|kaisi\.ee)$/.test(location.hostname)) $('back').style.display = 'block';
 setType('elastic'); resize(); requestAnimationFrame(loop);
 window.__pc = {p, sim, collide, explode, reset, stepSim, draw, setType};
 </script>
@@ -408,7 +408,7 @@ window.__pc = {p, sim, collide, explode, reset, stepSim, draw, setType};
 <script>
 /* Videojuhendid: failid on kaustas video/; nupud on näha ainult github.io-s (artefaktis videofaile pole) */
 (() => {
-  if (!/github\.io$/.test(location.hostname) && !/[?&]video\b/.test(location.search)) return;
+  if (!/(github\.io|kaisi\.ee)$/.test(location.hostname) && !/[?&]video\b/.test(location.search)) return;
   const row = document.getElementById('vids'), m = document.getElementById('vmodal'), v = m.querySelector('video');
   const names = {opetajale: 'Video õpetajale: kuidas simulatsiooni kasutada', opilasele: 'Video õpilasele: füüsika selgitus'};
   row.style.display = 'block';
@@ -427,7 +427,7 @@ window.__pc = {p, sim, collide, explode, reset, stepSim, draw, setType};
 </script>
 <script>
 /* Külastuste statistika: GoatCounter (küpsisteta, isikuandmeid ei salvestata), ainult github.io-s; tulemused: vanakrt.goatcounter.com */
-if (/github\.io$/.test(location.hostname)) {
+if (/(github\.io|kaisi\.ee)$/.test(location.hostname)) {
   const gc = document.createElement('script');
   gc.async = true; gc.dataset.goatcounter = 'https://vanakrt.goatcounter.com/count'; gc.src = 'https://gc.zgo.at/count.js';
   document.head.appendChild(gc);

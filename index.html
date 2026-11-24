@@ -233,7 +233,7 @@
 </div>
 <script>
 /* Külastuste statistika: GoatCounter (küpsisteta, isikuandmeid ei salvestata), ainult github.io-s; tulemused: vanakrt.goatcounter.com */
-if (/github\.io$/.test(location.hostname)) {
+if (/(github\.io|kaisi\.ee)$/.test(location.hostname)) {
   const gc = document.createElement('script');
   gc.async = true; gc.dataset.goatcounter = 'https://vanakrt.goatcounter.com/count'; gc.src = 'https://gc.zgo.at/count.js';
   document.head.appendChild(gc);

@@ -1,18 +1,18 @@
 # Füüsika simulatsioonid
 
-Interaktiivsed õppevahendid füüsikatundideks: https://vanakrt.github.io/
+Interaktiivsed õppevahendid füüsikatundideks: https://kaisi.ee/fyysika/
 
 | Simulatsioon | Kaust | Aadress |
 | --- | --- | --- |
-| Elektrivälja jõujooned | `elektrivali/` | https://vanakrt.github.io/elektrivali/ |
-| Magnetväli ja jõujooned | `magnetvali/` | https://vanakrt.github.io/magnetvali/ |
-| Peeglid ja läätsed | `optika/` | https://vanakrt.github.io/optika/ |
-| Valguse murdumine | `murdumine/` | https://vanakrt.github.io/murdumine/ |
-| Lainete interferents | `interferents/` | https://vanakrt.github.io/interferents/ |
-| Keha kaldpinnal | `kaldpind/` | https://vanakrt.github.io/kaldpind/ |
-| Kaldu visatud keha | `visatud/` | https://vanakrt.github.io/visatud/ |
-| Põrked – impulsi ja energia jäävus | `porked/` | https://vanakrt.github.io/porked/ |
-| Newtoni pendel | `newton/` | https://vanakrt.github.io/newton/ |
+| Elektrivälja jõujooned | `elektrivali/` | https://kaisi.ee/fyysika/elektrivali/ |
+| Magnetväli ja jõujooned | `magnetvali/` | https://kaisi.ee/fyysika/magnetvali/ |
+| Peeglid ja läätsed | `optika/` | https://kaisi.ee/fyysika/optika/ |
+| Valguse murdumine | `murdumine/` | https://kaisi.ee/fyysika/murdumine/ |
+| Lainete interferents | `interferents/` | https://kaisi.ee/fyysika/interferents/ |
+| Keha kaldpinnal | `kaldpind/` | https://kaisi.ee/fyysika/kaldpind/ |
+| Kaldu visatud keha | `visatud/` | https://kaisi.ee/fyysika/visatud/ |
+| Põrked – impulsi ja energia jäävus | `porked/` | https://kaisi.ee/fyysika/porked/ |
+| Newtoni pendel | `newton/` | https://kaisi.ee/fyysika/newton/ |
 
 Iga simulatsioon on üks iseseisev `index.html` ilma väliste sõltuvusteta. Uue simulatsiooni lisamiseks tee uus kaust ja lisa avalehele (`index.html`) uus kaart.
 
