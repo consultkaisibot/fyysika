@@ -32,7 +32,7 @@ module.exports = {sim:'elektrivali', clips:'toolehele_clips.json', hideHint:fals
     await a.click('#xclose', {move:0.5});
   }},
   {name:'lõpp', caption:'', min:3, run:async a => {
-    await a.card('Kõik simulatsioonid', '', 'vanakrt.github.io');
+    await a.card('Kõik simulatsioonid', '', 'kaisi.ee/fyysika');
     await a.wait(3);
   }}
 ]};

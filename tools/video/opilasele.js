@@ -101,7 +101,7 @@ module.exports = {scenes:[
     await a.wait(9.5);
   }},
   {name:'lõpp', caption:'', min:3, run:async a => {
-    await a.card('Kõik simulatsioonid', '', 'vanakrt.github.io');
+    await a.card('Kõik simulatsioonid', '', 'kaisi.ee/fyysika');
     await a.wait(3);
   }}
 ]};

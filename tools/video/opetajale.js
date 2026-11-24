@@ -1,7 +1,7 @@
 // Video õpetajale: kuidas simulatsiooni tunnis kasutada
 module.exports = {scenes:[
   {name:'pealkiri', speech:'t0', min:5.2, run:async a => {
-    await a.card('Magnetväli ja jõujooned', 'Kuidas simulatsiooni tunnis kasutada', 'vanakrt.github.io/magnetvali');
+    await a.card('Magnetväli ja jõujooned', 'Kuidas simulatsiooni tunnis kasutada', 'kaisi.ee/fyysika/magnetvali');
     await a.wait(5.2); await a.card(null);
   }},
   {name:'pööramine', speech:'t1', caption:'Vaate pööramine: lohista hiire või sõrmega. Suum: hiire ratas või kaks sõrme.', run:async a => {
@@ -91,7 +91,7 @@ module.exports = {scenes:[
     await a.wait(9.5);
   }},
   {name:'lõpp', caption:'', min:3, run:async a => {
-    await a.card('Kõik simulatsioonid', '', 'vanakrt.github.io');
+    await a.card('Kõik simulatsioonid', '', 'kaisi.ee/fyysika');
     await a.wait(3);
   }}
 ]};
