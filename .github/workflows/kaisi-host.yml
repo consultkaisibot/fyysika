@@ -1,0 +1,22 @@
+name: Adapt to kaisi.ee
+on:
+  push:
+    paths:
+      - '.github/workflows/kaisi-host.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  adapt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Allow kaisi.ee for back button, videos and stats; update URLs
+        run: |
+          files=$(git ls-files '*.html' 'README.md')
+          perl -pi -e 's{/github\\\.io\$/}{/(github\\.io|kaisi\\.ee)\$/}g; s{vanakrt\.github\.io/}{kaisi.ee/fyysika/}g; s{https://vanakrt\.github\.io/?}{https://kaisi.ee/fyysika/}g' $files
+          git diff --stat
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Serve simulations from kaisi.ee/fyysika (hostname checks, URLs)"
+          git push
